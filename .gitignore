@@ -167,5 +167,5 @@ cython_debug/
 data/
 checkpoints/
 wandb/
-models/*.bin
+**/models/*.bin
 WMPFDebugger/
