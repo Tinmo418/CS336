@@ -82,31 +82,31 @@
 ```text
 assignment1-basics/
 ├── cs336_basics/                              # 核心实现
-│   ├── tokenizer.py                           # 【本人实现】BPE 训练与文本编解码
-│   ├── train_tokenizer.py                     # 【本人实现】训练并保存 TinyStories tokenizer
-│   ├── linear_embedding_module.py             # 【本人实现】Linear 与 Embedding 基础模块
-│   ├── normalization.py                       # 【本人实现】RMSNorm 等归一化模块
-│   ├── transformer_modules.py                 # 【本人实现】RoPE、注意力、SwiGLU 与 TransformerLM
-│   ├── optimizer.py                           # 【本人实现】AdamW、学习率调度与梯度裁剪
-│   ├── training_utils.py                      # 【本人实现】交叉熵等训练辅助函数
-│   ├── training_loop.py                       # 【本人实现】数据采样与 checkpoint 工具
-│   ├── prepare_data.py                        # 【本人实现】将训练文本编码为 token ID
-│   ├── prepare_data_valid.py                  # 【本人实现】将验证文本编码为 token ID
-│   ├── experiment_for_training_script.py      # 【本人实现】小规模训练与调参实验
-│   ├── training_script.py                     # 【本人实现】正式训练入口
-│   ├── generation.py                          # 【本人实现】temperature 与 top-p 自回归生成
-│   ├── generate_text.py                       # 【本人实现】加载 checkpoint 并生成文本
-│   ├── pretokenization_example.py             # 【课程提供】预分词示例
-│   └── __init__.py                            # 【课程提供】Python 包初始化文件
-├── models/                                    # 【本人生成】词表、merge 规则与模型配置
-├── tests/                                     # 【课程提供】模块测试、测试数据与快照
-├── README.md                                  # 【本人编写】项目学习记录
-├── README_COURSE.md                           # 【课程提供】原始课程仓库说明
-├── cs336_assignment1_basics.pdf               # 【课程提供】Assignment 1 作业单
-├── make_submission.sh                         # 【课程提供】测试与提交脚本
+│   ├── tokenizer.py                           # BPE 训练与文本编解码
+│   ├── train_tokenizer.py                     # 训练并保存 TinyStories tokenizer
+│   ├── linear_embedding_module.py             # Linear 与 Embedding 基础模块
+│   ├── normalization.py                       # RMSNorm 等归一化模块
+│   ├── transformer_modules.py                 # RoPE、注意力、SwiGLU 与 TransformerLM
+│   ├── optimizer.py                           # AdamW、学习率调度与梯度裁剪
+│   ├── training_utils.py                      # 交叉熵等训练辅助函数
+│   ├── training_loop.py                       # 数据采样与 checkpoint 工具
+│   ├── prepare_data.py                        # 将训练文本编码为 token ID
+│   ├── prepare_data_valid.py                  # 将验证文本编码为 token ID
+│   ├── experiment_for_training_script.py      # 小规模训练与调参实验
+│   ├── training_script.py                     # 正式训练入口
+│   ├── generation.py                          # temperature 与 top-p 自回归生成
+│   ├── generate_text.py                       # 加载 checkpoint 并生成文本
+│   ├── pretokenization_example.py             # 预分词示例（课程提供）
+│   └── __init__.py                            # Python 包初始化文件（课程提供）
+├── models/                                    # 词表、merge 规则与模型配置
+├── tests/                                     # 模块测试、测试数据与快照（课程提供）
+├── README.md                                  # 项目学习记录
+├── README_COURSE.md                           # 原始课程仓库说明（课程提供）
+├── cs336_assignment1_basics.pdf               # Assignment 1 作业单（课程提供）
+├── make_submission.sh                         # 测试与提交脚本（课程提供）
 ├── pyproject.toml                             # 项目依赖与工具配置
 ├── uv.lock                                    # uv 依赖锁定文件
-└── LICENSE                                    # 【课程提供】开源许可证
+└── LICENSE                                    # 开源许可证（课程提供）
 ```
 
 准备好数据、tokenizer 和对应配置后，可以在项目根目录运行：
