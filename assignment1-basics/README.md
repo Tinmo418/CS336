@@ -79,13 +79,35 @@
 
 ## 文件说明
 
-- [`tokenizer.py`](cs336_basics/tokenizer.py)：BPE 训练与文本编解码。
-- [`transformer_modules.py`](cs336_basics/transformer_modules.py)：Transformer 模型组件。
-- [`optimizer.py`](cs336_basics/optimizer.py)：优化器、学习率调度与梯度裁剪。
-- [`training_loop.py`](cs336_basics/training_loop.py)：数据加载和 checkpoint 工具。
-- [`training_script.py`](cs336_basics/training_script.py)：正式训练入口。
-- [`experiment_for_training_script.py`](cs336_basics/experiment_for_training_script.py)：小规模训练实验。
-- [`generate_text.py`](cs336_basics/generate_text.py)：加载模型并生成文本。
+```text
+assignment1-basics/
+├── cs336_basics/                              # 核心实现
+│   ├── tokenizer.py                           # 【本人实现】BPE 训练与文本编解码
+│   ├── train_tokenizer.py                     # 【本人实现】训练并保存 TinyStories tokenizer
+│   ├── linear_embedding_module.py             # 【本人实现】Linear 与 Embedding 基础模块
+│   ├── normalization.py                       # 【本人实现】RMSNorm 等归一化模块
+│   ├── transformer_modules.py                 # 【本人实现】RoPE、注意力、SwiGLU 与 TransformerLM
+│   ├── optimizer.py                           # 【本人实现】AdamW、学习率调度与梯度裁剪
+│   ├── training_utils.py                      # 【本人实现】交叉熵等训练辅助函数
+│   ├── training_loop.py                       # 【本人实现】数据采样与 checkpoint 工具
+│   ├── prepare_data.py                        # 【本人实现】将训练文本编码为 token ID
+│   ├── prepare_data_valid.py                  # 【本人实现】将验证文本编码为 token ID
+│   ├── experiment_for_training_script.py      # 【本人实现】小规模训练与调参实验
+│   ├── training_script.py                     # 【本人实现】正式训练入口
+│   ├── generation.py                          # 【本人实现】temperature 与 top-p 自回归生成
+│   ├── generate_text.py                       # 【本人实现】加载 checkpoint 并生成文本
+│   ├── pretokenization_example.py             # 【课程提供】预分词示例
+│   └── __init__.py                            # 【课程提供】Python 包初始化文件
+├── models/                                    # 【本人生成】词表、merge 规则与模型配置
+├── tests/                                     # 【课程提供】模块测试、测试数据与快照
+├── README.md                                  # 【本人编写】项目学习记录
+├── README_COURSE.md                           # 【课程提供】原始课程仓库说明
+├── cs336_assignment1_basics.pdf               # 【课程提供】Assignment 1 作业单
+├── make_submission.sh                         # 【课程提供】测试与提交脚本
+├── pyproject.toml                             # 项目依赖与工具配置
+├── uv.lock                                    # uv 依赖锁定文件
+└── LICENSE                                    # 【课程提供】开源许可证
+```
 
 准备好数据、tokenizer 和对应配置后，可以在项目根目录运行：
 
